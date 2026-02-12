@@ -18,6 +18,7 @@ import { AppOptions } from "./app_options.js";
 import { LinkTarget } from "./pdf_link_service.js";
 import { PDFViewerApplication } from "./app.js";
 import { RenderingStates } from "./renderable_view.js";
+import "./assinatura.js";
 
 const AppConstants =
   typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")
@@ -350,6 +351,13 @@ if (
 } else {
   document.addEventListener("DOMContentLoaded", webViewerLoad, true);
 }
+
+window.top.postMessage(
+  {
+    type: "viewerLoaded",
+  },
+  "*"
+);
 
 export {
   PDFViewerApplication,
