@@ -821,6 +821,18 @@ const PDFViewerApplication = {
         });
       });
 
+      // Enable post message-based loading of PDF files.
+      window.addEventListener("message", async event => {
+        if (event.data?.type === "loadPdf" && event.data.url) {
+          const response = await fetch(event.data.url);
+          const blob = await response.blob();
+
+          const file = new File([blob], "nome", { type: "application/pdf" });
+
+          this.open({ url: URL.createObjectURL(file) });
+        }
+      });
+
       // Enable dragging-and-dropping a new PDF file onto the viewerContainer.
       //   appConfig.mainContainer.addEventListener("dragover", function (evt) {
       //     for (const item of evt.dataTransfer.items) {
