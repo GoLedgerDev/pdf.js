@@ -822,26 +822,26 @@ const PDFViewerApplication = {
       });
 
       // Enable dragging-and-dropping a new PDF file onto the viewerContainer.
-      appConfig.mainContainer.addEventListener("dragover", function (evt) {
-        for (const item of evt.dataTransfer.items) {
-          if (item.type === "application/pdf") {
-            evt.dataTransfer.dropEffect =
-              evt.dataTransfer.effectAllowed === "copy" ? "copy" : "move";
-            stopEvent(evt);
-            return;
-          }
-        }
-      });
-      appConfig.mainContainer.addEventListener("drop", function (evt) {
-        if (evt.dataTransfer.files?.[0].type !== "application/pdf") {
-          return;
-        }
-        stopEvent(evt);
-        eventBus.dispatch("fileinputchange", {
-          source: this,
-          fileInput: evt.dataTransfer,
-        });
-      });
+      //   appConfig.mainContainer.addEventListener("dragover", function (evt) {
+      //     for (const item of evt.dataTransfer.items) {
+      //       if (item.type === "application/pdf") {
+      //         evt.dataTransfer.dropEffect =
+      //           evt.dataTransfer.effectAllowed === "copy" ? "copy" : "move";
+      //         stopEvent(evt);
+      //         return;
+      //       }
+      //     }
+      //   });
+      //   appConfig.mainContainer.addEventListener("drop", function (evt) {
+      //     if (evt.dataTransfer.files?.[0].type !== "application/pdf") {
+      //       return;
+      //     }
+      //     stopEvent(evt);
+      //     eventBus.dispatch("fileinputchange", {
+      //       source: this,
+      //       fileInput: evt.dataTransfer,
+      //     });
+      //   });
     }
 
     if (!AppOptions.get("supportsDocumentFonts")) {
