@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <!--
 Copyright 2012 Mozilla Foundation
 
@@ -412,6 +412,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-haspopup="true"
                       aria-controls="editorCommentParamsToolbar"
                       data-l10n-id="pdfjs-editor-comment-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-comment-button-label"></span>
                     </button>
@@ -444,6 +445,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-haspopup="true"
                       aria-controls="editorSignatureParamsToolbar"
                       data-l10n-id="pdfjs-editor-signature-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-signature-button-label"></span>
                     </button>
@@ -472,6 +474,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-controls="editorHighlightParamsToolbar"
                       tabindex="0"
                       data-l10n-id="pdfjs-editor-highlight-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-highlight-button-label"></span>
                     </button>
@@ -528,6 +531,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-controls="editorFreeTextParamsToolbar"
                       tabindex="0"
                       data-l10n-id="pdfjs-editor-free-text-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-free-text-button-label"></span>
                     </button>
@@ -555,6 +559,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-controls="editorInkParamsToolbar"
                       tabindex="0"
                       data-l10n-id="pdfjs-editor-ink-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-ink-button-label"></span>
                     </button>
@@ -586,6 +591,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                       aria-controls="editorStampParamsToolbar"
                       tabindex="0"
                       data-l10n-id="pdfjs-editor-stamp-button"
+                      style="display: none"
                     >
                       <span data-l10n-id="pdfjs-editor-stamp-button-label"></span>
                     </button>
@@ -597,6 +603,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                           type="button"
                           tabindex="0"
                           data-l10n-id="pdfjs-editor-stamp-add-image-button"
+                          style="display: none"
                         >
                           <span class="editorParamsLabel" data-l10n-id="pdfjs-editor-stamp-add-image-button-label"></span>
                         </button>
@@ -608,11 +615,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <div id="editorModeSeparator" class="verticalToolbarSeparator"></div>
 
                 <div class="toolbarHorizontalGroup hiddenMediumView">
-                  <button id="printButton" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button">
+                  <button id="printButton" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button" style="display: none">
                     <span data-l10n-id="pdfjs-print-button-label"></span>
                   </button>
 
-                  <button id="downloadButton" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
+                  <button id="downloadButton" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button" style="display: none">
                     <span data-l10n-id="pdfjs-save-button-label"></span>
                   </button>
                 </div>
@@ -629,6 +636,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     aria-expanded="false"
                     aria-haspopup="true"
                     aria-controls="secondaryToolbar"
+                    style="display: none"
                   >
                     <span data-l10n-id="pdfjs-tools-button-label"></span>
                   </button>
@@ -1058,6 +1066,20 @@ See https://github.com/adobe-type-tools/cmap-resources
                       tabindex="0"
                     ></a>
                   </div>
+                </div>
+                <div id="aiModelSettings">
+                  <div>
+                    <span data-l10n-id="pdfjs-editor-alt-text-settings-download-model-label" data-l10n-args='{ "totalSize": 180 }'></span>
+                    <div id="aiModelDescription" class="description">
+                      <span data-l10n-id="pdfjs-editor-alt-text-settings-ai-model-description"></span>
+                    </div>
+                  </div>
+                  <button id="deleteModelButton" type="button" class="secondaryButton" tabindex="0">
+                    <span data-l10n-id="pdfjs-editor-alt-text-settings-delete-model-button"></span>
+                  </button>
+                  <button id="downloadModelButton" type="button" class="secondaryButton" tabindex="0">
+                    <span data-l10n-id="pdfjs-editor-alt-text-settings-download-model-button"></span>
+                  </button>
                 </div>
               </div>
             </div>
